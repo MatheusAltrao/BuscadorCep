@@ -1,0 +1,123 @@
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  
+  flex-direction: column;
+
+  background-image: linear-gradient(45deg, #121212,#212b46);
+
+  color: #fff;
+}
+
+.title{
+  font-size: 30px;
+  color: #fff;
+  animation: fromLeft 0.5s ease backwards;
+  animation-delay: 0.3s;
+
+  margin-top: 10rem;
+}
+
+.containerInput{
+  background-color: #212b46;
+  padding: 0 0.5rem;
+  margin: 2rem 0;
+
+  display: flex;
+  width: 300px;
+  
+
+  border-radius: 0.5rem;
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+
+
+  animation: fromLeft 0.5s ease backwards;
+  animation-delay: 0.5s;
+
+ 
+}
+
+.containerInput input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  color: #fff;
+
+  width: 100%;
+ 
+  margin: 0.5rem;
+  padding: 0.5rem;
+
+  
+}
+
+.containerInput input::placeholder{
+  color: rgb(136, 136, 136);
+}
+
+.buttonSearch{
+  background-color: transparent;
+  border: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+ 
+}
+
+.main{
+
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  background-color: #212b46;
+  padding: 2rem;
+
+  border-radius: 0.5rem;
+
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
+
+  transition: all 0.7s ease ;
+  
+}
+
+.main h2{
+  margin: 1rem 0;
+  font-size: 1.5rem;
+
+}
+
+.main span{
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+
+
+
+
+/* animation */
+
+@keyframes fromLeft {
+  from{
+    opacity: 0;
+      transform: translateX(-300px);
+
+  }
+
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
