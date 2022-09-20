@@ -74,8 +74,6 @@
 }
 
 .main{
-
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,6 +87,7 @@
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.5);
 
   transition: all 0.7s ease ;
+
   
 }
 

@@ -1,16 +1,14 @@
 import { FiSearch } from "react-icons/fi";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import './styles.css';
 
 import api from './services/api';
-
 
 
 function App() {
 
   const [input, setInput] = useState('')
   const [cep, setCep] = useState({})
-  const main = document.getElementById('main')
 
   async function handleSearch() {
     //01310930
@@ -21,22 +19,15 @@ function App() {
       return;
     }
 
-
-
     try {
       const response = await api.get(`${input}/json`)
       setCep(response.data)
       setInput("")
 
-      main.style.opacity = 1
-      setTimeout(() => {
-        main.style.opacity = 0
-      }, 3000);
 
     } catch {
       console.log("Cep nao existente!");
       setInput("")
-
 
     }
 
